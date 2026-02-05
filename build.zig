@@ -126,4 +126,9 @@ pub fn build(b: *std.Build) void {
 
     const test_step = b.step("test", "Run unit tests");
     test_step.dependOn(&run_tests.step);
+
+    // Clean step: zig build clean
+    const clean_step = b.step("clean", "Remove build artifacts");
+    clean_step.dependOn(&b.addRemoveDirTree(b.path(".zig-cache")).step);
+    clean_step.dependOn(&b.addRemoveDirTree(b.path("zig-out")).step);
 }
