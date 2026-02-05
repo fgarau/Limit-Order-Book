@@ -1,8 +1,5 @@
-\build
-build/
-build2/
 .vscode/
-\googletest
+googletest/
 /Generate_Orders/orders.txt
 
 # Zig
