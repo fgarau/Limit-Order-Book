@@ -1,4 +1,10 @@
 \build
+build/
+build2/
 .vscode/
 \googletest
 /Generate_Orders/orders.txt
+
+# Zig
+.zig-cache/
+zig-out/
